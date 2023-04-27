@@ -24,12 +24,12 @@ We keep the following information about each type of items:
 
 ## **Front-end previews**
 Homepage
-![start](1.jpg)
+![start](1.JPG)
 Update Item
-![start](4.jpg)
+![start](4.JPG)
 New Item
-![start](2.jpg)
+![start](2.JPG)
 Find Item by ID
-![start](3.jpg)
+![start](3.JPG)
 
 
