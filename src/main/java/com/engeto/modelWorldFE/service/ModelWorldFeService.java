@@ -12,7 +12,14 @@ public class ModelWorldFeService {
     ModelWorldFeRepository modelWorldFeRepository;
 
     public Item updateItem(Long id, Model model){
+        return modelWorldFeRepository.loadItemById(id);
+    }
+
+    public Item getItemById(Long id) throws Exception {
         Item item = modelWorldFeRepository.loadItemById(id);
+        if (item == null){
+            throw new Exception("Id not found");
+        }
         return item;
     }
 

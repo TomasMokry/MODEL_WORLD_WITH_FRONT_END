@@ -1,12 +1,16 @@
 package com.engeto.modelWorldFE.controller;
 
+import com.engeto.modelWorldFE.error.ErrorResponse;
 import com.engeto.modelWorldFE.model.Item;
 import com.engeto.modelWorldFE.repository.ModelWorldFeRepository;
 import com.engeto.modelWorldFE.service.ModelWorldFeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping("/modelWorld")
@@ -43,9 +47,9 @@ public class ModelWorldFeController {
     }
 
     @GetMapping(value = "/find")
-    public String viewOneItem(@ModelAttribute("oneItem")Item item, Model upModel){
+    public String viewOneItem(@ModelAttribute("oneItem")Item item, Model upModel) throws Exception {
         Long longId = (long) item.getId();
-        upModel.addAttribute("upItem", modelWorldFeRepository.loadItemById(longId));
+        upModel.addAttribute("upItem", modelWorldFeService.getItemById(longId));
         return "indexOne";
     }
 
@@ -73,4 +77,10 @@ public class ModelWorldFeController {
         modelWorldFeRepository.deleteItemById(id);
         return "redirect:/modelWorld/";
     }
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ErrorResponse handlerException(Exception e){
+        return new ErrorResponse(e.getLocalizedMessage(), LocalDateTime.now());
+    }
+
 }
