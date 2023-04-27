@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @ToString
 public class Item {
-    Long id;
+    int id;
     int partNo;
     String name;
     String description;
