@@ -23,5 +23,13 @@ We keep the following information about each type of items:
 * delete out of sale items
 
 ## **Front-end previews**
+Homepage
+![start](1.jpg)
+Update Item
+![start](4.jpg)
+New Item
+![start](2.jpg)
+Find Item by ID
+![start](3.jpg)
 
-![start](Screenshot_20230329_165004.png)
+
