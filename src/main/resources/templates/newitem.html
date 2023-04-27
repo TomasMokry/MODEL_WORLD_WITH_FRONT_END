@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>add new item</title>
+  <link th:href="@{/css/form.css}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;1,100&display=swap" rel="stylesheet">
+
+  <link rel="icon" th:href="@{images/favicon.ico}" type="image/x-icon">
+
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a th:href="@{/modelWorld/}"><img class="logoimage" src="/images/logo white.png"></a></li>
+      <li><a th:href="@{/modelWorld/}"><h1>MODEL WORLD | <span class="thin">eshop database</span></h1></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="description">
+    <div><h1>CREATE AND SAVE NEW ITEM TO DATABASE</h1></div>
+  </div>
+  <div class="form">
+    <form class="formitem" action="#" th:action="@{/modelWorld/save}" method="post" th:object="${item}">
+      <label>Part number:</label>
+      <input  type="text" th:field="*{partNo}" >
+
+      <label>Name:</label>
+      <input  type="text" th:field="*{name}" >
+
+      <label>Description:</label>
+      <input  type="text" th:field="*{description}" >
+
+      <label>Price:</label>
+      <input  type="text" th:field="*{price}" >
+      <button class="save" type="submit">SAVE NEW ITEM</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="copyright">
+    <p>&copy; TOMO 2023</p>
+  </div>
+</footer>
+
+</body>
+</html>

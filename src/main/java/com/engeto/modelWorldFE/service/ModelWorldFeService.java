@@ -11,8 +11,10 @@ public class ModelWorldFeService {
     @Autowired
     ModelWorldFeRepository modelWorldFeRepository;
 
-    public Item updateItem(int id, Model model){
+    public Item updateItem(Long id, Model model){
         Item item = modelWorldFeRepository.loadItemById(id);
         return item;
     }
+
+
 }

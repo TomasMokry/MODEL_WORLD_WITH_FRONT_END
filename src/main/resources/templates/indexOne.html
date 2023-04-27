@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>one item</title>
+  <link th:href="@{/css/index.css}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;1,100&display=swap" rel="stylesheet">
+
+  <link rel="icon" th:href="@{images/favicon.ico}" type="image/x-icon">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a th:href="@{/modelWorld/}"><img class="logoimage" src="/images/logo white.png"></a></li>
+      <li><a th:href="@{/modelWorld/}"><h1>MODEL WORLD | <span class="thin">eshop database</span></h1></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="actions">
+
+    <div><a th:href="@{/modelWorld/addNewForm}" class="new button no-underline" stylehref="#">Add new item</a></div>
+    <div><a th:href="@{/modelWorld/deleteItems}" class="new button no-underline" stylehref="#" role="button">Delete out of sale items</a></div>
+    <div><a th:href="@{/modelWorld/findItemForm}" class="new button no-underline" stylehref="#" role="button">Find item by id</a></div>
+
+  </div>
+
+  <div class="container">
+    <table>
+      <thead>
+
+      <tr class="header">
+        <th><h4>Id</h4></th>
+        <th><h4>Part no.</h4></th>
+        <th><h4>Name</h4></th>
+        <th><h4>Description</h4></th>
+        <th><h4>Is for sale</h4></th>
+        <th><h4>Price</h4></th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="gen" th:text="${upItem.id}" ></td>
+        <td class="gen" th:text="${upItem.partNo}" ></td>
+        <td class="gen" th:text="${upItem.name}" ></td>
+        <td class="gen" th:text="${upItem.description}" ></td>
+        <td class="gen" th:text="${upItem.isForSale ? 'Yes' : 'No'}" ></td>
+        <td class="gen" th:text="${upItem.price}"></td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+</main>
+
+<footer>
+  <div class="copyright">
+    <p>&copy; TOMO 2023</p>
+  </div>
+</footer>
+
+</body>
+</html>

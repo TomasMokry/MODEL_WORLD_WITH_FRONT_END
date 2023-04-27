@@ -32,7 +32,7 @@ public class ModelWorldFeRepository {
                 + newItem.getPrice() + ")");
     }
 
-    public Item loadItemById(int id){
+    public Item loadItemById(Long id){
         return jdbcTemplate.queryForObject("SELECT * FROM items WHERE id = ?", new Object[]{id}, (rs, rowNum) -> new Item(
                 rs.getInt("id"),
                 rs.getInt("partNo"),
@@ -53,7 +53,7 @@ public class ModelWorldFeRepository {
         return item;
     }
 
-    public void deleteItemById(int id){
+    public void deleteItemById(Long id){
         String query = "DELETE FROM items WHERE id =" + id;
         jdbcTemplate.execute(query);
     }
