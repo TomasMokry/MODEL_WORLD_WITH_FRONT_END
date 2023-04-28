@@ -31,12 +31,12 @@ Application keeps the following information about each type of items:
 ## **Front-end previews**
 
 
-![start](home.JPG)
+![start](homepage.JPG)
 ---
-![start](update.JPG)
+![start](updateItem.JPG)
 ---
-![start](add.JPG)
+![start](addItem.JPG)
 ---
-![start](find.JPG)
+![start](findItem.JPG)
 
 
