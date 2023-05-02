@@ -14,14 +14,7 @@
 
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a th:href="@{/modelWorld/}"><img class="logoimage" src="/images/logo white.png"></a></li>
-      <li><a th:href="@{/modelWorld/}"><h1>MODEL WORLD | <span class="thin">eshop database</span></h1></a></li>
-    </ul>
-  </nav>
-</header>
+<div th:replace="~{fragments/header :: header}"></div>
 
 <main>
   <div class="description">
@@ -40,16 +33,16 @@
 
       <label>Price:</label>
       <input  type="text" th:field="*{price}" >
+
+      <label>Is for sale?:</label>
+      <input type="checkbox" th:field="*{isForSale}" id="isForSale">
+
       <button class="save" type="submit">SAVE NEW ITEM</button>
     </form>
   </div>
 </main>
 
-<footer>
-  <div class="copyright">
-    <p>&copy; TOMO 2023</p>
-  </div>
-</footer>
+<div th:replace="~{fragments/footer :: footer}"></div>
 
 </body>
 </html>
