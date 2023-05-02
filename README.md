@@ -1,4 +1,4 @@
-# **MODEL WORLD ESHOP**
+# **MODEL WORLD eshop application with frontend**
 ### Second project for Engeto academy 
 #### Tomáš Mokrý | tomas.mokry@gmail.com | Discord Tomas M#0922
 ---
