@@ -3,9 +3,9 @@
 #### Tomáš Mokrý | tomas.mokry@gmail.com | Discord Tomas M#0922
 ---
 ## **Project description**
-The application is designed to be part of the fictional e-shop that offers 3D models. 
-This part of application manage the list of products that the e-shop offers. 
-Application is wrote in Java, it retrieve and modify the information via a REST API and use JDBC to communicate with mySQL database.
+The application is designed to be a part of the fictional e-shop that offers 3D models. 
+This part of application manages the list of products that the e-shop offers. 
+Application is written in Java, it retrieves and modifys the information via a REST API and uses JDBC to communicate with mySQL database.
 Front-end is created with Html and Css and Thymeleaf.
 
 ## **Model Item**
